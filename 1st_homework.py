@@ -11,13 +11,13 @@ def get_days_from_today(date: str) -> int:
         print("Помилка: дата має бути у форматі YYYY-MM-DD")
         return 0
 
+if __name__ == "__main__":
+    some_date = str(input(f"Введіть дату в форматі: РРРР-ММ-ДД: "))
+    result = get_days_from_today(some_date)
 
-some_date = str(input(f"Введіть дату в форматі: РРРР-ММ-ДД: "))
-result = get_days_from_today(some_date)
 
-
-if result > 0:
-    print(f"Від вказаної вами дати до сьогодні: {result} днів")
-else:
-    result = result*-1
-    print (f"Вказана вами дата настане через {result} днів")
+    if result > 0:
+        print(f"Від вказаної вами дати до сьогодні: {result} днів")
+    else:
+        result = result*-1
+        print (f"Вказана вами дата настане через {result} днів")
